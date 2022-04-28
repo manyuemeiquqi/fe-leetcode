@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端1px</title>
+</head>
+<style type="text/css">
+    .b1 {
+        position: relative;
+        border: none;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .b1::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 13px solid black;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+        box-sizing: border-box;
+    }
+
+    .b2 {
+        border: 13px solid black;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="b1">
+    </div>
+    <div class="b2"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style type="text/css">
+        .wrapper {
+            position: relative;
+            background-color: azure;
+            width: 900px;
+            height: 900px;
+        }
+
+        .view {
+            overflow: scroll;
+            height: 420px;
+        }
+
+        .r {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .a {
+            position: absolute;
+            top: 90px;
+            left: 0px;
+        }
+
+        .f {
+            position: fixed;
+            right: 0;
+        }
+
+        .s {
+            position: sticky;
+            top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="view">
+            <h1>static</h1>
+            <h2 class="r">relative</h2>
+            <h2 class="s">sticky</h2>
+            <h2 class="a">absolute</h2>
+            <h2 class="f">fixed</h2>
+            <div style="height: 1500px; background-color: red;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

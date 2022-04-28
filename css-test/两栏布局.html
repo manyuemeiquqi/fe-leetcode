@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左侧定宽，右侧自适应</title>
+    <style type="text/css">
+        .wrapper {
+            display: flex;
+            height: 200px;
+        }
+
+        .left1 {    
+            flex: 0 0 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .right1 {
+            flex: 1;
+            background-color: bisque;
+            /* height: 200px; */
+        }
+
+        .wrapper2 {
+            height: 200px;
+            width: 100%;
+            background-color: brown;
+        }
+
+        .left2 {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+
+        .right2 {
+            display: inline-block;
+            width: calc(100%-200px);
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left1"></div>
+        <div class="right1"></div>
+    </div>
+    <div class="wrapper2">
+        <div class="left2"></div>
+        <div class="right2"></div>
+    </div>
+</body>
+
+</html>
