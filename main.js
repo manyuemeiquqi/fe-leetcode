@@ -1,1 +1,3 @@
-console.log(1)
+let a=[]
+a['x']=1
+console.log(a);
