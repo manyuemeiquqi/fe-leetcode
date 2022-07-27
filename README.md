@@ -24,4 +24,5 @@ qs
 
 26. 全局上下文
 27. continue break
-28. 
+29. object的键值自动转换字符串，因此如果传入obj，会a["[object Object]"]变成这样，这也算隐式类型转换的一种
+✅
