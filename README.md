@@ -26,13 +26,29 @@ qs
 27. continue break
 29. object的键值自动转换字符串，因此如果传入obj，会a["[object Object]"]变成这样，这也算隐式类型转换的一种
 
-
+31. event.target的源头就是最深嵌套的target，可以通过event.stopPropagation
+37. 数组跳跃赋值，中间空的值是undefined，打印出来都是<1 empty item>
+38. 看不懂？？
 ✅
-43. ...'string'
+43. ...'string'  7内置 8falsy  
 
 
 
-79. for in for of 
+46. 这里用变量来拿到对象的引用，数组根据这个引用如果那这个进行赋值，这里复制的这个引用，这两个引用依然保持着对原始对象的引用
+
+49. parseInt对字符串的转换仅仅是通过合法性检查，遇到不合法的字符，停止解析然后忽略
+
+
+72. String.raw看不懂
+
+73. 看不懂题目
+
+
+75. freeze冻结的是对象， isFrozen可以检查，
+    foreeze的对象其属性不能进行修改
+76. in运算符和includes
+
+77. for in for of 
 ---
 80. array的项可以使任意值包括null和undefined
 81. 函数具备形参，但是未传入实参，那么参数的值就变为undefined
@@ -61,6 +77,11 @@ qs
 100. []&& ''&&  ||
 
 
+
+
+147. constructor内部的属性是不会在原型链上共享出去打的
+
+148. Object.assign 分配到第一个参数上面以及返回值
 
 151. object对象里面的箭头函数的this指向什么
 152. 看不懂题目
