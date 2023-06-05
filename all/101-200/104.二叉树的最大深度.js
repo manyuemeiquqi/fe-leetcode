@@ -17,18 +17,18 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    // 感觉像回溯
-    let ans = 0
-    const dfs = (root,depth)=>{
-        if(!root) return
-        ans = Math.max(ans,depth+1) 
-        dfs(root.left,depth+1)
-        dfs(root.right,depth+1)
-    }
-    dfs(root,0)
-    return ans 
-};
+const maxDepth = function (root) {
+  // 感觉像回溯
+  let ans = 0
+  const dfs = (root, depth) => {
+    if (!root)
+      return
+    ans = Math.max(ans, depth + 1)
+    dfs(root.left, depth + 1)
+    dfs(root.right, depth + 1)
+  }
+  dfs(root, 0)
+  return ans
+}
 // 目前对于dfs 的参数还是存在疑惑，需要作为模版去联练习，代码哪里去终止，哪里去继续进行
 // @lc code=end
-
