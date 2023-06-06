@@ -10,8 +10,11 @@
  * @return {number}
  */
 const trap = function (height) {
-  let ans = 0; const len = height.length; let stack = []
-  const left = new Array(len).fill(0); const right = new Array(len).fill(0)
+  let ans = 0
+  const len = height.length
+  let stack = []
+  const left = new Array(len).fill(0)
+  const right = new Array(len).fill(0)
   for (let i = 0; i < len; i++) {
     const stackTop = stack[stack.length - 1] || 0
     if (height[i] < stackTop) {
@@ -42,7 +45,6 @@ const trap = function (height) {
     }
   }
   for (let i = 0; i < len; i++) {
-    console.log('height[i]-Math.min(left[i],right[i]): ', height[i] - Math.min(left[i], right[i]))
     if (Math.min(left[i], right[i]))
       ans += Math.min(left[i], right[i]) - height[i]
   }
