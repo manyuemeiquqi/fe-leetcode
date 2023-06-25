@@ -10,6 +10,8 @@
  * @param {number} target
  * @return {number}
  */
+
+// 旋转这几道题用一个模版，改一下都可以用
 const search = function (nums, target) {
 // 旋转数组性质，旋转点以后得元素都满足< nums[0] ,前面的满足>=nums[0]
 
