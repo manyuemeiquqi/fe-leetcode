@@ -36,4 +36,31 @@ function quickSort(arr, l, r) {
   quickSort(arr, l, j)
   quickSort(arr, j + 1, r)
 }
+// 归并排序
+function mergeSort(arr, l, r) {
+  if (l >= r)
+    return
+  const mid = l + r >> 1
+  mergeSort(arr, l, mid)
+  mergeSort(arr, mid + 1, r)
+  let k = 0
+  // 左右两个归并数组的指针起点 i j
+  let i = l
+  let j = mid + 1
+  const tmp = []
+  while (i <= mid && j <= r) {
+    if (arr[i] <= arr[j])
+    // 谁小谁填入tmp
+      tmp[k++] = arr[i++]
+    else tmp[k++] = arr[j++]
+  }
+  while (i <= mid)
+    tmp[k++] = arr[i++]
+
+  while (j <= r)
+    tmp[k++] = arr[j++]
+
+  for (let i = l, j = 0; i <= r; i++, j++)
+    arr[i] = tmp[j]
+}
 // @lc code=end
