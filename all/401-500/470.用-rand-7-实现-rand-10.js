@@ -16,7 +16,7 @@ const rand10 = function () {
     return rand10()
   return t % 10 || 10
 }
-// 看了题解 想要ran10，必须执行两次
+// 看了题解 想要ran10，必须执行两次 官话叫做拒绝采样
 // 直接记忆吧
 
 // @lc code=end
