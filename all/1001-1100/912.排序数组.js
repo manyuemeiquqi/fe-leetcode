@@ -63,4 +63,31 @@ function mergeSort(arr, l, r) {
   for (let i = l, j = 0; i <= r; i++, j++)
     arr[i] = tmp[j]
 }
+
+function heapSort(arr) {
+  function adjust(arr, end, i) {
+    const left = i * 2 + 1
+    const right = i * 2 + 2
+
+    let largest = i
+    if (left < end && arr[largest] < arr[left])
+      largest = left
+    if (right < end && arr[largest] < arr[right])
+      largest = right
+    if (largest !== i) {
+      [arr[largest], arr[i]] = [arr[i], arr[largest]]
+      adjust(arr, end, largest)
+    }
+  }
+  // 建立大顶堆
+  const len = arr.length
+  for (let i = len >> 1; i >= 0; i--)
+    adjust(arr, len, i)
+
+  // 不断地把堆顶元素放到最后一个位置，然后去调整该堆
+  for (let i = len - 1; i > 0; i--) {
+    [arr[0], arr[i]] = [arr[i], arr[0]]
+    adjust(arr, i, 0)
+  }
+}
 // @lc code=end
