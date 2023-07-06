@@ -23,9 +23,5 @@ const lengthOfLongestSubstring = function (s) {
     }
     r++
   }
-  console.log('ans: ', ans)
-
   return ans
 }
-lengthOfLongestSubstring('pwwkew',
-)
