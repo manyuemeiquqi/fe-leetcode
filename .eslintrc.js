@@ -11,5 +11,6 @@ module.exports = {
   },
   rules: {
     'no-undef': 1,
+    '@typescript-eslint/no-this-alias': 1,
   },
 }
