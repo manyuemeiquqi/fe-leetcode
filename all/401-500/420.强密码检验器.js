@@ -11,7 +11,9 @@
  */
 const strongPasswordChecker = function (password) {
   const n = password.length
-  let hasLower = 0; let hasUpper = 0; let hasDigit = 0
+  let hasLower = 0
+  let hasUpper = 0
+  let hasDigit = 0
   for (let i = 0; i < n; ++i) {
     const ch = password[i]
     if (isLowerCase(ch))
